@@ -18,7 +18,7 @@ int c = 20;
 void setup() {               // configura el final de salida
   Serial.begin(9600);   /* Configurar una biblioteca serie a 9600 bps*/
   
-  Serial.println("Aquí hay algunas matemáticas: ");
+  Serial.println("Aqui hay algunas matematicas: ");
     
   Serial.print("a = ");
   Serial.println(a);
@@ -27,19 +27,20 @@ void setup() {               // configura el final de salida
   Serial.print("c = ");
   Serial.println(c);
 
-  Serial.print("a + b = ");
+  Serial.print("a + b = ");   //add
   Serial.println(a + b);
 
-  Serial.print("a * c = ");
+  Serial.print("a * c = ");   //multiply
   Serial.println(a * c);
 
-  Serial.print("c / b = ");
+  Serial.print("c / b = ");   //divide
   Serial.println(c / b);
 
-  Serial.print("c % b =");
+  Serial.print("c % b = ");   //module decimals en aquests cas no hi han
   Serial.println(c % b);
 
-  Serial.print("b - c "); 
+  Serial.print("b - c ");   //subtract
+  Serial.println(b - c); 
 }
 
 //************************** LOOP *******************************
