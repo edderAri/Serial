@@ -25,7 +25,7 @@ void setup() {               // configura el final de salida
   Serial.print("b = ");
   Serial.println(b);
 
-  h = sqrt( a*a + b*b );
+  h = sqrt( a*a + b*b );  //h = Arrel cuadrada (a2 + b2)
   
   Serial.print("h = ");
   Serial.println(h);
