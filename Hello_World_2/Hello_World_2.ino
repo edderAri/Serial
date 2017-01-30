@@ -22,7 +22,8 @@ void setup() {               // configura el final de salida
 
 void loop() {                // inicia el bucle del programa
   Serial.print("Hello world!"); /* Hola mundo!*/ 
-  delay(1000); /*Repeteix el missatge al minitor cada segon*/
+  delay(1000); /*Repeteix el missatge al monitor cada segon de 
+  manera vertical*/
  
 }
 
