@@ -15,23 +15,20 @@ int h;
 
 //************************* SETUP *******************************
 
-void setup() {               // configura el final de salida
-  Serial.begin(9600);   /* Configurar una biblioteca serie a 9600 bps*/
+void setup() {              
+  Serial.begin(9600);
   
-  Serial.println("Aqui hay algunas matematicas: ");
-    
+  Serial.println("Lets calculate a hypoteneuse");
+
   Serial.print("a = ");
   Serial.println(a);
+
   Serial.print("b = ");
   Serial.println(b);
+  h = sqrt( a*a + b*b );
 
-  h = sqrt( a*a + b*b );  //h = Arrel cuadrada (a2 + b2)
-  
   Serial.print("h = ");
   Serial.println(h);
-
-
-  
 }
 
 //************************** LOOP *******************************
