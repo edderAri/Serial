@@ -9,7 +9,7 @@
 
 //*********************** VARIABLES *****************************
 
-int drive_gb = 100;
+long drive_gb = 100;
 long drive_mb;
 
 
@@ -19,13 +19,13 @@ void setup() {
   Serial.begin(9600);
   
   Serial.print("Your HD is ");  /*Tu Disco duro es*/
-  Serial.print(drive_gb); /*5*/
+  Serial.print(drive_gb); /*100*/
   Serial.println(" GB large."); /*GB grande*/
 
-  drive_mb = 1024 * drive_gb; /*1024 * 5*/
+  drive_mb = 1024 * drive_gb; /*1024 * 100*/
 
   Serial.print("It can store "); /*puede almacenar*/
-  Serial.print(drive_mb); /* 5120=(1024*5) */
+  Serial.print(drive_mb); /* 102400=(1024*100) */
   Serial.println(" Megabytes!");
   
 }

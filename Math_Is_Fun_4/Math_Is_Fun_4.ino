@@ -27,12 +27,19 @@ void setup() {
   Serial.print("It can store "); /*puede almacenar*/
   Serial.print(drive_mb); /* -28672=(1024*5) */
   Serial.println(" Megabytes!");
-  /* El int drive_mb s'ha de canviar per long drive_mb Las 
-variables largas son variables de tamaño extendidas para el 
-almacenamiento de números y almacenan 32 bits (4 bytes), de
--2.147.483.648 a 2.147.483.647.
-Si hace matemáticas con enteros, al menos uno de los números 
-debe ser seguido por un L, forzándolo a ser un largo.*/
+  /*Los enteros son el tipo de datos principal para el 
+almacenamiento de números. En el Arduino Uno (y otras tarjetas
+ATMega) un int almacena un valor de 16 bits (2 bytes). Esto produce 
+un intervalo de -32.768 a 32.767 .
+Int's almacenan números negativos con una técnica llamada 
+complemento de 2 matemáticas. El bit más alto, a veces denominado 
+bit "signo", indica el número como un número negativo.
+El resto de los bits se invierte y se añade 1.
+El Arduino se ocupa de tratar con números negativos para usted, 
+de modo que las operaciones aritméticas funcionen de forma 
+transparente de la manera esperada. Sin embargo, puede haber 
+una complicación inesperada al tratar con el operador 
+derecho de bitshift.*/
 }
 
 //************************** LOOP *******************************
