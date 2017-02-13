@@ -31,7 +31,7 @@ void setup()
  
   Serial.print("a / b = ");
   Serial.println(d);
-  /*Arduino no treballa amb decimals, hem d'utilitzar un mòdul %*/
+  /*No podem treballar amb decimals si utilitzem int a les variables*/
 }
 
 //************************** LOOP *******************************
