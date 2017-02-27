@@ -9,30 +9,27 @@
 
 //*********************** VARIABLES *****************************
 
-int tempAigua = 100;
+int tempAigua = 100
+;
 //************************* SETUP *******************************
 
 void setup() 
 {              
   Serial.begin(9600);     
 
-  if (tempAigua > 100)
+  if (tempAigua > 100)  /*Temp mayor de 100*/
   {
-    Serial.print("Aigua bullint");
+    Serial.print("Aigua bullint");   
   } 
-  else if(tempAigua >= 90) 
+  else if(tempAigua >= 90 && tempAigua < 100) /*Temp mayor igual 90 i inferior 100*/
   {
     Serial.print ("Aigua apunt de bullir");
   }
-  else if (tempAigua < 100)
+  else if (tempAigua == 100)  /*Temp igual a 100*/
   {
-    Serial.print ("Aigua apunt de bullir");
+    Serial.print ("Aigua a 100C");
   }
-  else if (tempAigua == 100)
-  {
-    Serial.print ("Aigua a 100ºC");
-  }
-  else
+  else  /*si no es cumpleix cap condicio anterior*/
   {
     Serial.print ("Aigua encara no bull");
   }
