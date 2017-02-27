@@ -9,13 +9,14 @@
 
 //*********************** VARIABLES *****************************
 
+float KgCO2m2 = 43.3; /*int en enters i float en decimals*/
 //************************* SETUP *******************************
 
 void setup() 
 {              
   Serial.begin(9600);     
 
-  if (KgCO2m2 < 6.5 && KgCO2m2 > 3.5)  
+  if (KgCO2m2 < 6.5 && KgCO2m2 > 3.5)  /*Si el gassos son menors de 6.5 i majors de 3.5*/
   {
     Serial.print("B");   
   } 
@@ -36,7 +37,7 @@ void setup()
     Serial.print ("F");
   }
    
-   else if (KgCO2m2 >= 43.2)  
+   else if (KgCO2m2 >= 43.2)  /*major o igual*/
   {
     Serial.print ("G");
   }
@@ -45,7 +46,6 @@ void setup()
     Serial.print ("A");
   }
 }
-
 
 
 //************************** LOOP *******************************
