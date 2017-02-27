@@ -8,32 +8,28 @@
 
 
 //*********************** VARIABLES *****************************
-int a = 3;
-int b = 4;
-int h;
 
-
+int tempAigua = 110;
 //************************* SETUP *******************************
 
-void setup() {              
-  Serial.begin(9600);
-  
-  Serial.println("Lets calculate a hypoteneuse");
+void setup() 
+{              
+  Serial.begin(9600);     
 
-  Serial.print("a = ");
-  Serial.println(a);
-
-  Serial.print("b = ");
-  Serial.println(b);
-  h = sqrt( a*a + b*b );
-
-  Serial.print("h = ");
-  Serial.println(h);
+  if (tempAigua < 90)
+  {
+    Serial.print("Aigua encara no vull");
+  } 
+  else if(tempAigua >= 90 && < 100)
+  {
+    Serial.print ("Aigua apunt de bullir");
+  }
 }
 
 //************************** LOOP *******************************
 
-void loop() {                // inicia el bucle del programa
+void loop()  // 
+{               
 
 }
 
