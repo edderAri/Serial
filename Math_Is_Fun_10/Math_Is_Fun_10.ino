@@ -20,7 +20,7 @@ void setup()
 {              
   Serial.begin(9600);      // set up Serial library at 9600 bps
 
-  Serial.println("Here is division: ");
+  Serial.println(" Here is division: ");
 
   Serial.print("a = ");
   Serial.println(a);
