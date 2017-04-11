@@ -37,7 +37,7 @@ void loop()  // inicia el bucle del programa
 
   if(thisByte == 126)  // if printed last visible character '~'
   { 
-    while(true) /*Un cop arriba a aquesta instrucció es queda permanetment allà
+    while(true) /*Un cop arriba a aquesta instrucció es queda permanetment allà*/
     { 
     } 
   } 
