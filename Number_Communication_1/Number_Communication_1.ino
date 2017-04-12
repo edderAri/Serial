@@ -29,27 +29,31 @@ void setup()
 
 void loop()  //
 {
-  while (Serial.available() > 0) {  // LLEGEIX LA RSERIE
-    r1 = Serial.parseInt();//
-    Serial.print("r1="); // ESCRIU r1 =
-    Serial.print(r1); // ESCRIU EL VALOR DE LA r1
-    Serial.print("  ohms  "); // ESCRIU ohms
+  while (Serial.available() > 0)
+  {
+    r1 = Serial.parseInt();
+    Serial.print("r1= ");
+    Serial.print(r1);
+    Serial.print("  ohms\t");
 
     r2 = Serial.parseInt();
-    Serial.print ("r2 = "); // ESCRIU r2 = 
-    Serial.print (r2); // ESCRIU EL VALOR DE r2
-    Serial.println ("  Ohms  "); // ESCRIU ohms
+    Serial.print ("r2 = ");
+    Serial.print (r2);
+    Serial.println ("  ohms");
 
     if (Serial.read() == '\n') {
-      Serial.print ("rSerie = ");
-      Serial.print (r1 + r2);
-      Serial.print ("  ohms  ");
 
-      Serial.print ("rParalel = "); // Escriu (rParalel = )
-      Serial.print ((r1 * r2) / (r1 + r2)); // ESCRIU EL VALOR DE DIVIDIR ELS ()
-      Serial.println ("  Ohms  "); // ESCRIU ohms 
-      Serial.println (" "); // PASA A SEGUEN LINEA 
-      Serial.println ("Entra nous valors per r1 i r2"); // ESCRIU entra nous...
+      rSerie = r1 + r2;
+      rParalel = (r1 * r2) / (r1 + r2);
+
+      Serial.print("rSerie = ");
+      Serial.print(rSerie);
+      Serial.print(" ohms\t");
+      Serial.print("rParal.lel = ");
+      Serial.print(rParalel);
+      Serial.println(" ohms");
+      Serial.println();
+      Serial.println("Entra nous valors per r1 i r2 (separats per una coma)");
     }
   }
 }
